@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { LinearGradient } from "expo-linear-gradient";
+import { StyleSheet, View } from "react-native";
+import StartGame from "./src/screens/StartGame";
+import { colors } from "./src/utils/colors";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <LinearGradient
+      colors={[colors.startBGColor, colors.appBGColor]}
+      style={styles.container}
+    >
+      <StartGame />
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
